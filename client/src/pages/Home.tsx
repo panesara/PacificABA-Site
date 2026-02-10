@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { ArrowRight, Users, ClipboardCheck, Heart } from "lucide-react";
+import { ArrowRight, Users, ClipboardCheck, Heart, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 
@@ -50,6 +50,9 @@ export default function Home() {
                   Providing scientifically validated ABA treatment to individuals
                   diagnosed with Autism and related disabilities. We empower those
                   with special needs to reach for the stars.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+                  Under the clinical supervision of <strong>Dr. Ramen Saggu, PhD, BCBA</strong>, our experienced team delivers evidence-based, individualized services for children and families in British Columbia.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/services">
@@ -116,18 +119,48 @@ export default function Home() {
                 Our Services
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                We offer comprehensive ABA programs tailored to each individual's
-                unique needs and goals.
+                Comprehensive, evidence-based ABA programs tailored to each child's unique needs and developmental stage.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* On-Site Group Program Card */}
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+              {/* Pre-Diagnostic Intervention Program Card */}
+              <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 overflow-hidden">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                  <Zap className="w-24 h-24 text-primary/30" />
+                </div>
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <Zap className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                    </div>
+                    <CardTitle className="text-2xl font-display">
+                      Pre-Diagnostic Intervention
+                    </CardTitle>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    Support while you wait for assessment or formal diagnosis
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Our Pre-Diagnostic Intervention Program supports young children awaiting autism assessment during critical developmental periods. Delivered by our experienced ABA team under Dr. Ramen Saggu's clinical supervision, this program provides timely, meaningful support without requiring a formal diagnosis.
+                  </p>
+                  <Link href="/services">
+                    <Button className="w-full group/btn transition-all duration-300 hover:shadow-lg">
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              {/* Intensive 1:1 Program Card */}
               <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/CjDVnPi7hPzce502XYcPYy-img-3_1770748566000_na1fn_Z3JvdXAtcHJvZ3JhbS1pbGx1c3RyYXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L0NqRFZuUGk3aFB6Y2U1MDJYWWNQWXktaW1nLTNfMTc3MDc0ODU2NjAwMF9uYTFmbl9aM0p2ZFhBdGNISnZaM0poYlMxcGJHeDFjM1J5WVhScGIyNC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=K6iRvmAhiaFgnVV0qZkp37~XbgFJe7~uqs4T9-Ly~7duNJoGG1zwkpBgJYD5nuWY9m82DlMs6ObvZBzp0SDdAKwDR2hxoUhUQBk4OH4J0cg2UG4j95vwQl84MzQ1H7F6Kr6s~al0of1209EPduL2eGSrjBSebyjBF1KX7yfHPKWlYMfw~LnHs2EG4h8sMvhdg0piOsZe8Kb1dhyn5WkFKhtrZap4s8gxnF7yeaVWap57Y8HA2s2V5UzL2FLN6a-qdLAUjkcHRsG9vTH98KkT318389o~gxSz5pnCsYluvUq8epsfS4haJaNm5Nk3DRWmkATLxEgZ1xyoxissCO-Z9Q__"
-                    alt="Group program illustration"
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/CjDVnPi7hPzce502XYcPYy-img-4_1770748566000_na1fn_YXNzZXNzbWVudC1pbGx1c3RyYXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L0NqRFZuUGk3aFB6Y2U1MDJYWWNQWXktaW1nLTRfMTc3MDc0ODU2NjAwMF9uYTFmbl9ZWE56WlhOemJXVnVkQzFwYkd4MWMzUnlZWFJwYjI0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=aU4bMxxeVOaRO8jZ8Z4lUPdUasIXlKAdRExFvyUUy2y5fNVYpnjLTK0M2dRXdvhpNtDinrFWvJnfsCKSebnrT5YSBeYtoA0NTWD1UETwbud6J-UwzVjTe7dENG9FeodGzIxUob8QZ6xTyfpIHpzfzLx1V8JVs~p1sBoAmf1PeB78juSTvQEnn6FOQmGQcT4Lmqxo7HpgXESuIUpAgArhXa-rGQuroPp6VZPtKWYDCo-mx0gJDS-w~lbKVoLhAmyoUVxOBg6noL0w-xcSv1xk0IbAaNMcyS8fOTH-bk962dmJE78vzkbShCrc6WBrFXP3jgAlaDMD~kG04pjJVPh2zQ__"
+                    alt="1:1 intensive program"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
@@ -138,29 +171,17 @@ export default function Home() {
                       <Users className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
                     <CardTitle className="text-2xl font-display">
-                      On-Site Group Program
+                      Intensive 1:1 Programs
                     </CardTitle>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    Intensive group ABA program for children ages 2-6 years old,
-                    16-20 hours per week in a structured pre-school setting.
+                    Individualized ABA therapy for toddlers and preschoolers
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 mb-6 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <Heart className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>One-to-one intensive teaching sessions</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Natural environment teaching</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Group activities and community outings</span>
-                    </li>
-                  </ul>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Our clinic-based 1:1 programs use the Lovaas approach with natural environment teaching. Available for children under 6, these programs include speech and language therapy and focus on building foundational skills for learning and development.
+                  </p>
                   <Link href="/services">
                     <Button className="w-full group/btn transition-all duration-300 hover:shadow-lg">
                       Learn More
@@ -170,12 +191,12 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              {/* Private Assessments Card */}
+              {/* Group Programs Card */}
               <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-accent/50 overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/CjDVnPi7hPzce502XYcPYy-img-4_1770748566000_na1fn_YXNzZXNzbWVudC1pbGx1c3RyYXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L0NqRFZuUGk3aFB6Y2U1MDJYWWNQWXktaW1nLTRfMTc3MDc0ODU2NjAwMF9uYTFmbl9ZWE56WlhOemJXVnVkQzFwYkd4MWMzUnlZWFJwYjI0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=aU4bMxxeVOaRO8jZ8Z4lUPdUasIXlKAdRExFvyUUy2y5fNVYpnjLTK0M2dRXdvhpNtDinrFWvJnfsCKSebnrT5YSBeYtoA0NTWD1UETwbud6J-UwzVjTe7dENG9FeodGzIxUob8QZ6xTyfpIHpzfzLx1V8JVs~p1sBoAmf1PeB78juSTvQEnn6FOQmGQcT4Lmqxo7HpgXESuIUpAgArhXa-rGQuroPp6VZPtKWYDCo-mx0gJDS-w~lbKVoLhAmyoUVxOBg6noL0w-xcSv1xk0IbAaNMcyS8fOTH-bk962dmJE78vzkbShCrc6WBrFXP3jgAlaDMD~kG04pjJVPh2zQ__"
-                    alt="Assessment illustration"
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/CjDVnPi7hPzce502XYcPYy-img-3_1770748566000_na1fn_Z3JvdXAtcHJvZ3JhbS1pbGx1c3RyYXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L0NqRFZuUGk3aFB6Y2U1MDJYWWNQWXktaW1nLTNfMTc3MDc0ODU2NjAwMF9uYTFmbl9aM0p2ZFhBdGNISnZaM0poYlMxcGJHeDFjM1J5WVhScGIyNC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=K6iRvmAhiaFgnVV0qZkp37~XbgFJe7~uqs4T9-Ly~7duNJoGG1zwkpBgJYD5nuWY9m82DlMs6ObvZBzp0SDdAKwDR2hxoUhUQBk4OH4J0cg2UG4j95vwQl84MzQ1H7F6Kr6s~al0of1209EPduL2eGSrjBSebyjBF1KX7yfHPKWlYMfw~LnHs2EG4h8sMvhdg0piOsZe8Kb1dhyn5WkFKhtrZap4s8gxnF7yeaVWap57Y8HA2s2V5UzL2FLN6a-qdLAUjkcHRsG9vTH98KkT318389o~gxSz5pnCsYluvUq8epsfS4haJaNm5Nk3DRWmkATLxEgZ1xyoxissCO-Z9Q__"
+                    alt="Group programs"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
@@ -183,32 +204,20 @@ export default function Home() {
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                      <ClipboardCheck className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors" />
+                      <Users className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors" />
                     </div>
                     <CardTitle className="text-2xl font-display">
-                      Private Assessments
+                      Group Programs
                     </CardTitle>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    Comprehensive private assessments for Autism Spectrum Disorder
-                    (ASD) conducted by qualified professionals.
+                    Preschool and school readiness group-based ABA programs
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 mb-6 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <Heart className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>Professional diagnostic evaluations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>Detailed assessment reports</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Heart className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span>Personalized treatment recommendations</span>
-                    </li>
-                  </ul>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Our group programs combine structured ABA with 1:1 instruction, emphasizing social skills, peer interaction, and school readiness. Available for ages 2-6, these programs include speech and language therapy and focus on generalization of skills.
+                  </p>
                   <Link href="/services">
                     <Button
                       variant="outline"
@@ -220,6 +229,49 @@ export default function Home() {
                   </Link>
                 </CardContent>
               </Card>
+
+              {/* Speech & Language Therapy Card */}
+              <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-accent/50 overflow-hidden">
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
+                  <Heart className="w-24 h-24 text-accent/30" />
+                </div>
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                      <Heart className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors" />
+                    </div>
+                    <CardTitle className="text-2xl font-display">
+                      Speech & Language Therapy
+                    </CardTitle>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    Integrated communication support by Speech-Language Pathologists
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    Our SLPs work as part of our interdisciplinary autism team, using evidence-based, autism-affirming practices to develop meaningful communication skills. Services include family coaching and strategies for carryover at home and school.
+                  </p>
+                  <Link href="/services">
+                    <Button
+                      variant="outline"
+                      className="w-full group/btn transition-all duration-300 hover:bg-accent/10 hover:shadow-lg"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center">
+              <Link href="/services">
+                <Button size="lg" variant="outline" className="transition-all duration-300 hover:scale-105">
+                  View All Services
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -242,6 +294,9 @@ export default function Home() {
                   the sky is the limit
                 </span>
                 .
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Under the clinical leadership of Dr. Ramen Saggu, PhD, BCBA, we deliver evidence-based, individualized ABA services that help children and families in British Columbia reach their full potential.
               </p>
               <Link href="/about">
                 <Button
