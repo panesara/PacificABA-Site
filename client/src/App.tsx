@@ -50,6 +50,14 @@ function Router() {
           />
         )}
       </Route>
+      <Route path={"/store"}>
+        {() => (
+          <ComingSoon
+            title="Store"
+            description="Coming soon! Access our online courses and training materials."
+          />
+        )}
+      </Route>
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
