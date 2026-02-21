@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Store from "./pages/Store";
+
 import ComingSoon from "./pages/ComingSoon";
 
 function Router() {
@@ -17,7 +17,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/services"} component={Services} />
       <Route path={"/contact"} component={Contact} />
-      <Route path={"/store"} component={Store} />
+
       <Route path={"/faq"}>
         {() => (
           <ComingSoon
