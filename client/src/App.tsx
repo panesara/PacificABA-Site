@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
+import About from "./pages/About";
 import ComingSoon from "./pages/ComingSoon";
 
 function Router() {
@@ -26,14 +27,7 @@ function Router() {
           />
         )}
       </Route>
-      <Route path={"/about"}>
-        {() => (
-          <ComingSoon
-            title="About Us"
-            description="Learn more about Pacific ABA Academy, our team, and our mission."
-          />
-        )}
-      </Route>
+      <Route path={"/about"} component={About} />
       <Route path={"/careers"}>
         {() => (
           <ComingSoon
