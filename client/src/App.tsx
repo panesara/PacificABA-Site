@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 
 import About from "./pages/About";
 import ComingSoon from "./pages/ComingSoon";
+import ChatBot from "./components/ChatBot";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -66,6 +67,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <ChatBot />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
