@@ -223,9 +223,11 @@ export default function Services() {
             <div className="mb-20 border-t border-border pt-20">
               <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                 <div>
-                  <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 h-96 flex items-center justify-center">
-                    <BookOpen className="w-32 h-32 text-primary/20" />
-                  </div>
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/oVPYRU9RgQdubP3obmpBvs-img-1_1771810670000_na1fn_a2luZGVyZ2FydGVuLXJlYWRpbmVzcy1pbGx1c3RyYXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L29WUFlSVTlSZ1FkdWJQM29ibXBCdnMtaW1nLTFfMTc3MTgxMDY3MDAwMF9uYTFmbl9hMmx1WkdWeVoyRnlkR1Z1TFhKbFlXUnBibVZ6Y3kxcGJHeDFjM1J5WVhScGIyNC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=VojSpuUujwkDW2-rwhkznNO7ralmeYqhG5bxY-yvmSr6AeEnyGgQdEpBTOOhkjo7ukkBaynAOTuKQ9XNGvqtcNUO1AWLklF3jM2wEXHasTHgkdqZm4NcD6nrWaBgY1P1YLLvmfwdKjwUmALvoktkavQK5yROv7Oy~YlBqcrVIkFMdrRsoE7Gq9FjSG~omJ~AayYbaNMDlrh7P3EnjtuqPc7WXLOdSsveLcNw5YAEOtfL05bBiWOAFZITXmvcJO9WZ5w9ArRZxuHHq~PAfwnetlkPZ3HiBnQ~-HO6l2Y6941g9yt~fXT2kbVj4pdY19KjbjeeuyTjsQCQJVOID3SSWQ__"
+                    alt="Kindergarten Readiness Program"
+                    className="w-full h-auto rounded-3xl shadow-2xl"
+                  />
                 </div>
 
                 <div>
@@ -276,8 +278,9 @@ export default function Services() {
 
             {/* Service 5: Social Skills Group */}
             <div className="mb-20 border-t border-border pt-20">
-              <div className="max-w-3xl mx-auto">
-                <div className="flex items-center gap-3 mb-6">
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                <div className="order-2 lg:order-1">
+                  <div className="flex items-center gap-3 mb-6">
                   <div className="w-16 h-16 rounded-3xl bg-accent/10 flex items-center justify-center">
                     <Sparkles className="w-8 h-8 text-accent" />
                   </div>
@@ -311,17 +314,35 @@ export default function Services() {
                   ))}
                 </ul>
 
-                <Link href="/contact">
-                  <Button size="lg" variant="outline" className="transition-all duration-300 hover:scale-105 hover:bg-accent/10">
-                    Inquire About This Program
-                  </Button>
-                </Link>
+                  <Link href="/contact">
+                    <Button size="lg" variant="outline" className="transition-all duration-300 hover:scale-105 hover:bg-accent/10">
+                      Inquire About This Program
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="order-1 lg:order-2">
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/byp0vGtLpu30NVy42dkDou-img-1_1771810701000_na1fn_c29jaWFsLXNraWxscy1ncm91cC1pbGx1c3RyYXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L2J5cDB2R3RMcHUzME5WeTQyZGtEb3UtaW1nLTFfMTc3MTgxMDcwMTAwMF9uYTFmbl9jMjlqYVdGc0xYTnJhV3hzY3kxbmNtOTFjQzFwYkd4MWMzUnlZWFJwYjI0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=NCwtPTzfoWx5grA7886dxE8vrZIfGe2ulj-GQ4jIXLxC5n50nXlpHuZ8UXQPAehB0XlGcD3gUAmy3APpVNcPjks-a5xeKq4kYKIekW-4YSw9shQDokf9VhObmfJrGH9DEDLLCxiPENT4k9r8EM97N1rpR8QRZg5BwNh92UmJw7wqlk-Z0fZD7p7~3d6Kwh9-wO4c4RIjnxWXEYe6~~pgGM5rO0NUYr9COxbpBrUb4aJzFh7LgdzhBgcWq3BL0k9BlQIA7RmKJ4ZyjEC~66kZwQgFZjGJbHMOnFKrJZ3ypJNV0-8-KRqUyQ8g-yXAny6HO0rrmhDxviYyChgcZqEWYA__"
+                    alt="Social Skills Group"
+                    className="w-full h-auto rounded-3xl shadow-2xl"
+                  />
+                </div>
               </div>
             </div>
 
             {/* Service 6: Speech & Language Therapy */}
             <div className="mb-20 border-t border-border pt-20">
-              <div className="max-w-3xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/oVPYRU9RgQdubP3obmpBvs-img-3_1771810673000_na1fn_c3BlZWNoLWxhbmd1YWdlLXRoZXJhcHktaWxsdXN0cmF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L29WUFlSVTlSZ1FkdWJQM29ibXBCdnMtaW1nLTNfMTc3MTgxMDY3MzAwMF9uYTFmbl9jM0JsWldOb0xXeGhibWQxWVdkbExYUm9aWEpoY0hrdGFXeHNkWE4wY21GMGFXOXUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=iZquwjkz7olJxLHWZLVmp~By~ZDnBPKYcWdvPF0WLh16Vx2xDNZs8~a2ZkvgtoaZGr4aVHrWF~JTFFzu41Gd~JoLM7i6YJuUH5S~xjzjwtCtpHhnOa47J1dEcYoW45b9-CS1qht2ZPyj0WPY3nwXDZ2eM~tNNYM1L5BTzYoliapXr3YQsy2L-NfbF-0kdworK109ptJ9pVxSvOCss136RszzFPbSoAl79x2z3VzQYINCNg0wf0a-wgPtLjvkcjBj~5t8Zn7TYSoIp7uAQmRBPAA5LDIHEJxPZhEf8ZvDRlj7lAbVLtHQGmiBm95x94uvyzsNNehfJGVZ5yqpEjXY0A__"
+                    alt="Speech & Language Therapy"
+                    className="w-full h-auto rounded-3xl shadow-2xl"
+                  />
+                </div>
+
+                <div>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-16 h-16 rounded-3xl bg-primary/10 flex items-center justify-center">
                     <Heart className="w-8 h-8 text-primary" />
@@ -363,17 +384,20 @@ export default function Services() {
                   Our SLPs work closely with behavior analysts, behaviour interventionists, school teams, and families to align communication and developmental goals, support functional communication across settings, and reduce communication-related frustration. Therapy is individualized, engaging, and clinic-based, with strategies designed for carryover at home, school, and in the community. Family coaching and practical strategies are included to support communication in all environments.
                 </p>
 
-                <Link href="/contact">
-                  <Button size="lg" className="transition-all duration-300 hover:scale-105">
-                    Inquire About Speech Therapy
-                  </Button>
-                </Link>
+                  <Link href="/contact">
+                    <Button size="lg" className="transition-all duration-300 hover:scale-105">
+                      Inquire About Speech Therapy
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Service 7: Supervision Services */}
             <div className="border-t border-border pt-20">
-              <div className="max-w-3xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                <div className="order-2 lg:order-1">
+                  <div className="max-w-3xl">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-16 h-16 rounded-3xl bg-accent/10 flex items-center justify-center">
                     <ClipboardCheck className="w-8 h-8 text-accent" />
@@ -412,11 +436,21 @@ export default function Services() {
                   Pacific ABA Academy is an approved CEU provider and accredited practicum internship site for future behaviour analysts. Remote supervision maintains the same standards of quality, collaboration, and accountability as in-person supervision, while offering convenience and accessibility for busy professionals.
                 </p>
 
-                <Link href="/contact">
-                  <Button size="lg" variant="outline" className="transition-all duration-300 hover:scale-105 hover:bg-accent/10">
-                    Contact About Supervision Services
-                  </Button>
-                </Link>
+                    <Link href="/contact">
+                      <Button size="lg" variant="outline" className="transition-all duration-300 hover:scale-105 hover:bg-accent/10">
+                        Contact About Supervision Services
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="order-1 lg:order-2">
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/oVPYRU9RgQdubP3obmpBvs-img-4_1771810670000_na1fn_c3VwZXJ2aXNpb24tc2VydmljZXMtaWxsdXN0cmF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L29WUFlSVTlSZ1FkdWJQM29ibXBCdnMtaW1nLTRfMTc3MTgxMDY3MDAwMF9uYTFmbl9jM1Z3WlhKMmFYTnBiMjR0YzJWeWRtbGpaWE10YVd4c2RYTjBjbUYwYVc5dS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=PQRZGQ-GAQKS~uHZUmXmwSQU1Cal7Asc3N~bZIv7P205e0KamO7DulbKrfR9c2IkBGhtfgE-aMuKmHhbf-EaXtOjL1yTLkntfZ8diFUSfgTpFEie93~qU47wnmkoM6EuD7Xw14XNBLfm8ks6xstd7YzLE9xJTmpyAZcx1cpqtN9TRSEp25iwgKwuJwVU11uBwQ8xZPdYza9Zl~oQonBHI3RsqpK11Kjkn4g63VNDJvmPAF9xMUAo6BYyUVeP6gYBLu93CXkWkJUa6tFuuLDdX6HiksjqTNSDK8JA30-yWdGvWC~429Tdr7r1ruWafIts61mJ3X~4bznhh8zloEhaqw__"
+                    alt="BACB & QABA Supervision Services"
+                    className="w-full h-auto rounded-3xl shadow-2xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
