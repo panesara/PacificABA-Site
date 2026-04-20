@@ -61,8 +61,16 @@ export const chatRouter = router({
           messages: messages as any,
         });
 
-        const reply =
-          response.choices[0]?.message?.content || "I'm not sure how to respond to that. Please contact us directly at (604) 555-0123.";
+        let reply = "I'm not sure how to respond to that. Please contact us directly at (604) 555-0123.";
+        const content = response.choices[0]?.message?.content;
+        if (typeof content === 'string') {
+          reply = content;
+        } else if (Array.isArray(content) && content.length > 0) {
+          const textContent = content.find(c => 'text' in c);
+          if (textContent && 'text' in textContent) {
+            reply = textContent.text;
+          }
+        }
 
         return {
           reply,
