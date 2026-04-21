@@ -3,15 +3,17 @@ import { publicProcedure, router } from "./_core/trpc";
 import { notifyOwner } from "./_core/notification";
 import nodemailer from "nodemailer";
 
-const EMAIL_USER = process.env.EMAIL_USER;
-const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
+const FASTMAIL_EMAIL = process.env.FASTMAIL_EMAIL;
+const FASTMAIL_PASSWORD = process.env.FASTMAIL_PASSWORD;
 
-// Create transporter for Gmail
+// Create transporter for FastMail (sends to office@pacificaba.com)
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.fastmail.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: EMAIL_USER,
-    pass: EMAIL_PASSWORD,
+    user: FASTMAIL_EMAIL,
+    pass: FASTMAIL_PASSWORD,
   },
 });
 
@@ -28,8 +30,8 @@ export const contactRouter = router({
     .mutation(async ({ input }) => {
       try {
         // Validate that email credentials are configured
-        if (!EMAIL_USER || !EMAIL_PASSWORD) {
-          console.error("[Contact] Email credentials not configured");
+        if (!FASTMAIL_EMAIL || !FASTMAIL_PASSWORD) {
+          console.error("[Contact] FastMail credentials not configured");
           return {
             success: false,
             message: "Email service is not configured. Please try again later.",
@@ -51,10 +53,10 @@ ${input.message}
 This email was sent from the Pacific ABA Academy website contact form.
         `.trim();
 
-        // Send email via Gmail (will be forwarded to office@pacificaba.com via Gmail settings)
+        // Send email directly to office@pacificaba.com via FastMail
         await transporter.sendMail({
-          from: EMAIL_USER,
-          to: EMAIL_USER,
+          from: FASTMAIL_EMAIL,
+          to: FASTMAIL_EMAIL,
           replyTo: input.email,
           subject: `New Contact Form Submission from ${input.name}`,
           text: emailBody,
@@ -70,7 +72,7 @@ This email was sent from the Pacific ABA Academy website contact form.
           `,
         });
 
-        console.log(`[Contact] Email sent successfully from ${input.email}`);
+        console.log(`[Contact] Email sent successfully to office@pacificaba.com from ${input.email}`);
 
         // Send notification to app owner
         try {
