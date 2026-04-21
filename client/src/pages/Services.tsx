@@ -101,11 +101,9 @@ export default function Services() {
                 </div>
 
                 <div className="order-1 lg:order-2">
-                  <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663345785943/AvwZ782cpoEQkTwQwTz254/pre-diagnostic-program-8Ucxh6xPRHHbJquhDCjY8D.webp"
-                    alt="Pre-Diagnostic Intervention Program"
-                    className="w-full h-auto rounded-3xl shadow-2xl"
-                  />
+                  <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 h-96 flex items-center justify-center">
+                    <Zap className="w-32 h-32 text-primary/20" />
+                  </div>
                 </div>
               </div>
             </div>

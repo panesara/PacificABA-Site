@@ -19,7 +19,6 @@
 - [x] Contact form unit tests
 - [x] Email notifications to office@pacificaba.com via Gmail SMTP (working!)
 - [x] Email service unit tests
-- [x] Pre-Diagnostic Intervention Program illustration added to Services page
 
 ## Remaining Tasks
 - [ ] Hostinger deployment setup
