@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=20.0.0"
   },
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-    "build": "vite build && cp -r server dist/ && cp -r drizzle dist/",
-    "start": "NODE_ENV=production node dist/server/_core/index.ts",
+    "build": "vite build && cp -r server dist/ && cp -r drizzle dist/ && cp vite.config.ts dist/ && cp package.json dist/ && node -e \"require('fs').writeFileSync('dist/index.js', 'import(\\\"./server/_core/index.ts\\\").catch(console.error);')\"",
+    "start": "NODE_ENV=production node --import tsx dist/index.js",
     "format": "prettier --write ."
   },
   "dependencies": {
@@ -109,7 +109,7 @@
       "tailwindcss>nanoid": "3.3.7"
     }
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "s3://vida-prod-gitrepo/webdev-git/310519663345785943/AvwZ782cpoEQkTwQwTz254"
