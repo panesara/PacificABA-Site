@@ -51,7 +51,7 @@ ${input.message}
 This email was sent from the Pacific ABA Academy website contact form.
         `.trim();
 
-        // Send email
+        // Send email via Gmail (will be forwarded to office@pacificaba.com via Gmail settings)
         await transporter.sendMail({
           from: EMAIL_USER,
           to: EMAIL_USER,

@@ -7,16 +7,16 @@ vi.mock("nodemailer");
 describe("Contact Form Email Sending", () => {
   beforeAll(() => {
     // Set environment variables for testing
-    process.env.EMAIL_USER = "pacificabaacademyoffice@gmail.com";
-    process.env.EMAIL_PASSWORD = "atce rxrj dwcw yacv";
+    process.env.FASTMAIL_EMAIL = "office@pacificaba.com";
+    process.env.FASTMAIL_PASSWORD = "748s4m8l5l8b5d8j";
   });
 
-  it("should have email credentials configured", () => {
-    expect(process.env.EMAIL_USER).toBe("pacificabaacademyoffice@gmail.com");
-    expect(process.env.EMAIL_PASSWORD).toBe("atce rxrj dwcw yacv");
+  it("should have FastMail credentials configured", () => {
+    expect(process.env.FASTMAIL_EMAIL).toBe("office@pacificaba.com");
+    expect(process.env.FASTMAIL_PASSWORD).toBe("748s4m8l5l8b5d8j");
   });
 
-  it("should create a nodemailer transporter with Gmail settings", () => {
+  it("should create a nodemailer transporter with FastMail settings", () => {
     const mockCreateTransport = vi.fn().mockReturnValue({
       sendMail: vi.fn().mockResolvedValue({ messageId: "test-id" }),
     });
@@ -24,18 +24,22 @@ describe("Contact Form Email Sending", () => {
     vi.mocked(nodemailer).createTransport = mockCreateTransport;
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.fastmail.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        user: process.env.FASTMAIL_EMAIL,
+        pass: process.env.FASTMAIL_PASSWORD,
       },
     });
 
     expect(mockCreateTransport).toHaveBeenCalledWith({
-      service: "gmail",
+      host: "smtp.fastmail.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: "pacificabaacademyoffice@gmail.com",
-        pass: "atce rxrj dwcw yacv",
+        user: "office@pacificaba.com",
+        pass: "748s4m8l5l8b5d8j",
       },
     });
 
