@@ -15,6 +15,8 @@
 - [x] GitHub repository backup (panesara/PacificABA-Site)
 - [x] Build optimization for Hostinger (using tsx)
 - [x] TypeScript errors fixed (ChatBot content handling, Stripe API version)
+- [x] Contact form backend integration with database and owner notifications
+- [x] Contact form unit tests
 
 ## Remaining Tasks
 - [ ] Hostinger deployment setup
