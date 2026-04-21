@@ -41,3 +41,25 @@
 [2026-04-21T20:52:33.005Z] }
 [2026-04-21T20:52:33.006Z] 
 [2026-04-21T20:52:33.006Z] Node.js v22.13.0
+[2026-04-21T20:56:23.067Z] 4:56:23 PM [vite] (client) page reload index.html
+[2026-04-21T20:56:23.167Z] 4:56:23 PM [tsx] unlink in ./vite.config.ts Restarting...
+[2026-04-21T20:56:23.415Z] c
+[2026-04-21T20:56:23.415Z] node:internal/modules/run_main:122
+[2026-04-21T20:56:23.416Z] triggerUncaughtException(
+[2026-04-21T20:56:23.416Z] ^
+[2026-04-21T20:56:23.416Z] Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/ubuntu/pacific-aba-website/server/_core/index.ts' imported from /home/ubuntu/pacific-aba-website/
+[2026-04-21T20:56:23.417Z] at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+[2026-04-21T20:56:23.417Z] at moduleResolve (node:internal/modules/esm/resolve:932:10)
+[2026-04-21T20:56:23.417Z] at defaultResolve (node:internal/modules/esm/resolve:1056:11)
+[2026-04-21T20:56:23.417Z] at nextResolve (node:internal/modules/esm/hooks:748:28)
+[2026-04-21T20:56:23.418Z] at resolveBase (file:///home/ubuntu/pacific-aba-website/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1776804983305:2:3744)
+[2026-04-21T20:56:23.418Z] at resolveDirectory (file:///home/ubuntu/pacific-aba-website/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1776804983305:2:4243)
+[2026-04-21T20:56:23.419Z] at resolveTsPaths (file:///home/ubuntu/pacific-aba-website/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1776804983305:2:4984)
+[2026-04-21T20:56:23.419Z] at resolve (file:///home/ubuntu/pacific-aba-website/node_modules/.pnpm/tsx@4.20.6/node_modules/tsx/dist/esm/index.mjs?1776804983305:2:5361)
+[2026-04-21T20:56:23.419Z] at nextResolve (node:internal/modules/esm/hooks:748:28)
+[2026-04-21T20:56:23.419Z] at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+[2026-04-21T20:56:23.420Z] code: 'ERR_MODULE_NOT_FOUND',
+[2026-04-21T20:56:23.420Z] url: 'file:///home/ubuntu/pacific-aba-website/server/_core/index.ts'
+[2026-04-21T20:56:23.420Z] }
+[2026-04-21T20:56:23.421Z] 
+[2026-04-21T20:56:23.421Z] Node.js v22.13.0
