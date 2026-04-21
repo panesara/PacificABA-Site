@@ -63,3 +63,14 @@
 [2026-04-21T20:56:23.420Z] }
 [2026-04-21T20:56:23.421Z] 
 [2026-04-21T20:56:23.421Z] Node.js v22.13.0
+[2026-04-21T21:04:13.470Z] Dev server process group stopped
+[2026-04-21T21:04:13.490Z] ELIFECYCLE  Command failed.
+[2026-04-21T21:04:13.509Z] Dev server exited with code -15
+[2026-04-21T21:04:16.484Z] Starting dev server with command: pnpm run dev
+[2026-04-21T21:04:16.881Z] 
+[2026-04-21T21:04:16.882Z] > pacific-aba-rebuild@1.0.0 dev /home/ubuntu/pacific-aba-website
+[2026-04-21T21:04:16.882Z] > node server.js
+[2026-04-21T21:04:16.883Z] 
+[2026-04-21T21:04:17.032Z] ◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+[2026-04-21T21:04:17.040Z] Server running on port 3000
+[2026-04-21T21:04:17.041Z] Visit http://localhost:3000
