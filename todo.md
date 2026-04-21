@@ -17,6 +17,8 @@
 - [x] TypeScript errors fixed (ChatBot content handling, Stripe API version)
 - [x] Contact form backend integration with database and owner notifications
 - [x] Contact form unit tests
+- [x] Email notifications to office@pacificaba.com via Fastmail SMTP
+- [x] Email service unit tests
 
 ## Remaining Tasks
 - [ ] Hostinger deployment setup

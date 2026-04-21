@@ -6,6 +6,7 @@ import { storeRouter } from "./storeRouter";
 import { chatRouter } from "./chatRouter";
 import { createContactSubmission } from "./db";
 import { notifyOwner } from "./_core/notification";
+import { sendContactFormEmail } from "./emailService";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -50,6 +51,17 @@ export const appRouter = router({
             title: "New Contact Form Submission",
             content: `${input.name} (${input.email}) submitted a message: "${input.message.substring(0, 100)}..."`,
           });
+          
+          // Send email notification to office
+          await sendContactFormEmail(
+            {
+              name: input.name,
+              email: input.email,
+              phone: input.phone,
+              message: input.message,
+            },
+            "office@pacificaba.com"
+          );
           
           return { success: true };
         } catch (error) {
