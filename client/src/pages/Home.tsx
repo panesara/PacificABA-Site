@@ -127,7 +127,11 @@ export default function Home() {
               {/* Pre-Diagnostic Intervention Program Card */}
               <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/50 overflow-hidden">
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                  <Zap className="w-24 h-24 text-primary/30" />
+                  <img
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663345785943/AvwZ782cpoEQkTwQwTz254/pre-diagnostic-intervention-clean-Z3VotHCDyxLjbahhdSjrV9.webp"
+                    alt="Pre-Diagnostic Intervention Program"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
