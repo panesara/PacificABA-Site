@@ -7,9 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,10 +20,29 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const contactMutation = trpc.contact.submitForm.useMutation();
+  const isSubmitting = contactMutation.isPending;
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    
+    try {
+      const result = await contactMutation.mutateAsync({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        message: formData.message,
+      });
+
+      if (result.success) {
+        toast.success(result.message);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error(result.message);
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    }
   };
 
   const handleChange = (
@@ -135,10 +155,20 @@ export default function Contact() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full group transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                      disabled={isSubmitting}
+                      className="w-full group transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send Message
-                      <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </>
+                      )}
                     </Button>
                   </form>
                 </CardContent>
