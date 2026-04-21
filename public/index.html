@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pacific ABA Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span>📍 Unit #230 - 8232 120th Street Surrey, BC V3W 3N2</span>
+                    <span>📞 778-565-1064</span>
+                    
+                    <span>✉️ office@pacificaba.com</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>PACIFIC ABA ACADEMY</h1>
+                    <p>Reaching for the Stars</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/downloads">Downloads</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Pacific ABA Academy</h2>
+                <p>Pacific ABA Academy is dedicated to providing scientifically validated ABA treatment to individuals diagnosed with Autism and related disabilities. It is our goal to provide motivation and self-empowerment to teach individuals touched with special needs that the sky is the limit.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1503454537688-e6c8fef7eaa0?w=400&h=300&fit=crop" alt="Care">
+                <div class="image-overlay">Care</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="service-card">
+                <h3>On-Site Group Program</h3>
+                <p>We house an intensive group ABA program for children ages 2-6 years old for 16-20 hours a week.</p>
+                <p>The on-site group ABA program encompasses a "pre-school" type setting where children attend a highly structured group ABA Program for 4 hours a day. This program involves two critical components: One-to-one intensive teaching sessions following the Lovaas method and other scientifically validated approaches, and natural environment teaching sessions to generalize the skills taught in the intensive teaching sessions.</p>
+                <img src="https://images.unsplash.com/photo-1503454537688-e6c8fef7eaa0?w=400&h=250&fit=crop" alt="Group Program">
+                <a href="/services" class="btn-learn-more">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Private Assessments</h3>
+                <p>Pacific ABA Academy is now offering Private Assessments for Autism Spectrum Disorder (ASD).</p>
+                <img src="https://images.unsplash.com/photo-1516534775068-bb57a52f4fee?w=400&h=250&fit=crop" alt="Assessments">
+                <a href="/services" class="btn-learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>Chat with us</h4>
+                <button onclick="toggleChatbot()" class="close-btn">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatInput(event)">
+                <button onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Pacific ABA Academy. All rights reserved.</p>
+            <p>Contact: office@pacificaba.com | 778-565-1064</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

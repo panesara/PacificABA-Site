@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Pacific ABA Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span>📍 Unit #230 - 8232 120th Street Surrey, BC V3W 3N2</span>
+                    <span>📞 778-565-1064</span>
+                    
+                    <span>✉️ office@pacificaba.com</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>PACIFIC ABA ACADEMY</h1>
+                    <p>Reaching for the Stars</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/downloads">Downloads</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Services Content -->
+    <section class="page-content">
+        <div class="container">
+            <h1>Our Services</h1>
+            
+            <div class="service-detail">
+                <h2>On-Site Group Program</h2>
+                <p>We house an intensive group ABA program for children ages 2-6 years old for 16-20 hours a week. The on-site group ABA program encompasses a "pre-school" type setting where children attend a highly structured group ABA Program for 4 hours a day.</p>
+                <p>This program involves two critical components:</p>
+                <ul>
+                    <li>One-to-one intensive teaching sessions following the Lovaas method and other scientifically validated approaches</li>
+                    <li>Natural environment teaching sessions to generalize the skills taught in the intensive teaching sessions</li>
+                </ul>
+                <p>Four qualified interventionists work across six children, with 1-to-1 instruction provided during the intensive teaching sessions. Group activities include: art time, snack time, community outings, active games, and board games.</p>
+                <img src="https://images.unsplash.com/photo-1503454537688-e6c8fef7eaa0?w=600&h=400&fit=crop" alt="Group Program">
+            </div>
+
+            <div class="service-detail">
+                <h2>Private Assessments</h2>
+                <p>Pacific ABA Academy is now offering Private Assessments for Autism Spectrum Disorder (ASD). Our comprehensive assessments are designed to identify strengths and areas for development.</p>
+                <img src="https://images.unsplash.com/photo-1516534775068-bb57a52f4fee?w=600&h=400&fit=crop" alt="Assessments">
+            </div>
+
+            <div class="service-detail">
+                <h2>Pre-Diagnostic Intervention Program</h2>
+                <p>Early intervention is crucial for children with developmental delays. Our Pre-Diagnostic Intervention Program provides support for children who may be at risk or showing early signs of developmental differences.</p>
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663345785943/AvwZ782cpoEQkTwQwTz254/pre-diagnostic-intervention-PUXkHYHHtQy4suWyuNyvVW.webp" alt="Pre-Diagnostic Program">
+            </div>
+
+            <div class="service-detail">
+                <h2>Speech & Language Therapy</h2>
+                <p>Integrated communication support by Speech-Language Pathologists. Our SLPs work as part of our interdisciplinary autism team, using evidence-based, autism-affirming practices to develop meaningful communication skills. Services include family coaching and strategies for carryover at home and school.</p>
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663345785943/AvwZ782cpoEQkTwQwTz254/speech-language-therapy-EELpHLaek6BVSmQeAwp5qu.webp" alt="Speech & Language Therapy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>Chat with us</h4>
+                <button onclick="toggleChatbot()" class="close-btn">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatInput(event)">
+                <button onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Pacific ABA Academy. All rights reserved.</p>
+            <p>Contact: office@pacificaba.com | 778-565-1064</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        .page-content {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .page-content h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .service-detail {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-detail h2 {
+            color: #27ae60;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-detail p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .service-detail ul {
+            margin: 15px 0 15px 20px;
+            line-height: 1.8;
+        }
+
+        .service-detail img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</body>
+</html>

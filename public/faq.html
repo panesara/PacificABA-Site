@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Pacific ABA Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span>📍 Unit #230 - 8232 120th Street Surrey, BC V3W 3N2</span>
+                    <span>📞 778-565-1064</span>
+                    
+                    <span>✉️ office@pacificaba.com</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>PACIFIC ABA ACADEMY</h1>
+                    <p>Reaching for the Stars</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/downloads">Downloads</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FAQ Content -->
+    <section class="page-content">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            
+            <div class="faq-item">
+                <h3>What is ABA therapy?</h3>
+                <p>Applied Behavior Analysis (ABA) is a scientifically validated approach to understanding behavior and how the environment affects it. ABA therapy is used to help individuals with Autism Spectrum Disorder and related disabilities develop important skills and reduce challenging behaviors.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What age groups do you serve?</h3>
+                <p>Our on-site group program serves children ages 2-6 years old. We also offer private assessments and intervention services for a broader age range. Please contact us for specific information about your child's age group.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How many hours per week does the program run?</h3>
+                <p>Our intensive on-site group program runs 16-20 hours per week, with 4-hour daily sessions. The specific schedule can be customized based on your family's needs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is funding available through AFU?</h3>
+                <p>Yes, many families are eligible for funding through Autism Funding Unit (AFU). Please contact our office to discuss funding options and eligibility requirements.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What qualifications do your staff have?</h3>
+                <p>Our team is led by Dr. Ramen Saggu, PhD, BCBA, with clinical supervision. All interventionists are trained in evidence-based ABA practices and receive ongoing professional development.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I enroll in your programs?</h3>
+                <p>To enroll, please contact our office at 778-565-1064 or email office@pacificaba.com. We'll discuss your child's needs and help you through the enrollment process.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you offer private one-on-one services?</h3>
+                <p>Yes, we offer private assessments and can discuss customized intervention options. Contact us to learn more about private services available.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is included in a private assessment?</h3>
+                <p>Our private assessments for Autism Spectrum Disorder are comprehensive evaluations designed to identify strengths and areas for development. Results include recommendations for intervention strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>Chat with us</h4>
+                <button onclick="toggleChatbot()" class="close-btn">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatInput(event)">
+                <button onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Pacific ABA Academy. All rights reserved.</p>
+            <p>Contact: office@pacificaba.com | 778-565-1064</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        .page-content {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .page-content h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #27ae60;
+        }
+
+        .faq-item h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            color: #555;
+            line-height: 1.8;
+        }
+    </style>
+</body>
+</html>
