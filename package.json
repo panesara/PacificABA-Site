@@ -2,14 +2,15 @@
   "name": "pacific-aba-website",
   "version": "1.0.0",
   "type": "module",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=20.0.0"
   },
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-    "build": "vite build && cp -r server dist/ && cp -r drizzle dist/ && cp vite.config.ts package.json tsconfig.json dist/",
-    "start": "NODE_ENV=production tsx dist/server/_core/index.ts",
+    "build": "vite build && cp -r server dist/ && cp -r drizzle dist/ && cp vite.config.ts package.json tsconfig.json dist/ && echo \"import tsx from 'tsx'; tsx.default('./server/_core/index.ts');\" > dist/index.js",
+    "start": "NODE_ENV=production node --import tsx dist/server/_core/index.ts",
     "format": "prettier --write ."
   },
   "dependencies": {
