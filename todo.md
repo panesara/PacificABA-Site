@@ -24,7 +24,7 @@
 - [ ] Hostinger deployment setup
 - [ ] Environment variables configuration for production
 - [ ] Database migration to Hostinger MySQL
-- [ ] Domain configuration (www.pacificaba.com)
+- [x] Domain configuration (www.pacificaba.com and pacificaba.com pointing to Manus)
 - [ ] SSL certificate setup
 - [ ] Implement FAQ page (currently "Coming Soon")
 - [ ] Implement Careers page (currently "Coming Soon")
