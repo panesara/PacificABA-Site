@@ -1,13 +1,13 @@
 import nodemailer from "nodemailer";
 
-// Email configuration - using Fastmail SMTP
+// Email configuration - using Gmail SMTP
 const transporter = nodemailer.createTransport({
-  host: "smtp.fastmail.com",
+  host: "smtp.gmail.com",
   port: 465,
-  secure: true,
+  secure: true, // Use SSL
   auth: {
-    user: process.env.EMAIL_USER || "",
-    pass: process.env.EMAIL_PASSWORD || "",
+    user: "pacificabaacademyoffice@gmail.com",
+    pass: (process.env.EMAIL_PASSWORD || "").replace(/\s/g, ""), // Remove spaces from password
   },
 });
 
