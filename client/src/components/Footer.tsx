@@ -40,14 +40,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
                 <Phone className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <div className="text-sm">
-                  <a href="tel:778-565-1064" className="block hover:underline">
-                    778-565-1064
-                  </a>
-                  <a href="tel:1-855-286-8143" className="block hover:underline">
-                    1-855-286-8143
-                  </a>
-                </div>
+                <a href="tel:778-565-1064" className="text-sm hover:underline">
+                  778-565-1064
+                </a>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
                 <Mail className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />

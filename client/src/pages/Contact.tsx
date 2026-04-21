@@ -189,18 +189,12 @@ export default function Contact() {
                       </CardTitle>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-2">
+                  <CardContent>
                     <a
                       href="tel:778-565-1064"
                       className="block text-muted-foreground hover:text-primary transition-colors"
                     >
                       778-565-1064
-                    </a>
-                    <a
-                      href="tel:1-855-286-8143"
-                      className="block text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      1-855-286-8143 (Toll-free)
                     </a>
                   </CardContent>
                 </Card>
