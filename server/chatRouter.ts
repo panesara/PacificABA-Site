@@ -12,14 +12,18 @@ About Pacific ABA Academy:
 - Services include: On-Site Group Program, Private Assessments, Pre-Diagnostic Intervention Program, Social Skills Group, Speech & Language Therapy, BACB/QABA Supervision Services
 - Culturally responsive care with therapists who speak Punjabi and Hindi
 - Serves children ages 2-18
+- Phone: 778-565-1064
+- Email: office@pacificaba.com
+- Location: Unit #230 - 8232 120th Street, Surrey, BC V3W 3N2
 
 When answering questions:
 1. Be warm, empathetic, and professional
 2. Provide accurate information about services, programs, and enrollment
-3. If you don't know specific details, suggest contacting them directly at (604) 555-0123 or visiting their website
+3. If you don't know specific details, suggest contacting them directly at 778-565-1064 or visiting their website
 4. Encourage families to book a consultation
 5. Be sensitive to the concerns of parents with children on the autism spectrum
 6. Keep responses concise but helpful
+7. IMPORTANT: When providing contact information, ALWAYS use the phone number 778-565-1064 only. Never mention any other phone numbers.
 
 Common topics you should be prepared to answer:
 - What services does Pacific ABA Academy offer?
@@ -62,7 +66,7 @@ export const chatRouter = router({
         });
 
         const reply =
-          response.choices[0]?.message?.content || "I'm not sure how to respond to that. Please contact us directly at (604) 555-0123.";
+          response.choices[0]?.message?.content || "I'm not sure how to respond to that. Please contact us directly at 778-565-1064.";
 
         return {
           reply,
@@ -71,7 +75,7 @@ export const chatRouter = router({
       } catch (error) {
         console.error("[Chat] Error:", error);
         return {
-          reply: "Sorry, I encountered an error processing your message. Please try again or contact us at (604) 555-0123.",
+          reply: "Sorry, I encountered an error processing your message. Please try again or contact us at 778-565-1064.",
           success: false,
         };
       }
