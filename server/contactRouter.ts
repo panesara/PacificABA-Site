@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { publicProcedure, router } from "./_core/trpc";
+import { notifyOwner } from "./_core/notification";
 import nodemailer from "nodemailer";
 
 const EMAIL_USER = process.env.EMAIL_USER;
@@ -71,12 +72,36 @@ This email was sent from the Pacific ABA Academy website contact form.
 
         console.log(`[Contact] Email sent successfully from ${input.email}`);
 
+        // Send notification to app owner
+        try {
+          await notifyOwner({
+            title: "New Contact Form Submission",
+            content: `${input.name} (${input.email}) submitted a contact form.${input.phone ? ` Phone: ${input.phone}` : ""}
+
+Message: ${input.message.substring(0, 100)}${input.message.length > 100 ? "..." : ""}`,
+          });
+        } catch (notificationError) {
+          console.error("[Contact] Failed to send notification:", notificationError);
+          // Don't fail the submission if notification fails
+        }
+
         return {
           success: true,
           message: "Thank you for your message! We'll get back to you soon.",
         };
       } catch (error) {
         console.error("[Contact] Error sending email:", error);
+        
+        // Try to notify owner of the error
+        try {
+          await notifyOwner({
+            title: "Contact Form Submission Failed",
+            content: `Failed to process contact form from ${input.email}. Error: ${error instanceof Error ? error.message : "Unknown error"}`,
+          });
+        } catch (notificationError) {
+          console.error("[Contact] Failed to send error notification:", notificationError);
+        }
+        
         return {
           success: false,
           message:
