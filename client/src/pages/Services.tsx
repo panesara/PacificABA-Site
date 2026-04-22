@@ -336,15 +336,15 @@ export default function Services() {
             {/* Service 6: Speech & Language Therapy */}
             <div className="mb-20 border-t border-border pt-20">
               <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-                <div>
+                <div className="order-2 lg:order-1">
                   <img
-                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/oVPYRU9RgQdubP3obmpBvs-img-3_1771810673000_na1fn_c3BlZWNoLWxhbmd1YWdlLXRoZXJhcHktaWxsdXN0cmF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L29WUFlSVTlSZ1FkdWJQM29ibXBCdnMtaW1nLTNfMTc3MTgxMDY3MzAwMF9uYTFmbl9jM0JsWldOb0xXeGhibWQxWVdkbExYUm9aWEpoY0hrdGFXeHNkWE4wY21GMGFXOXUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=iZquwjkz7olJxLHWZLVmp~By~ZDnBPKYcWdvPF0WLh16Vx2xDNZs8~a2ZkvgtoaZGr4aVHrWF~JTFFzu41Gd~JoLM7i6YJuUH5S~xjzjwtCtpHhnOa47J1dEcYoW45b9-CS1qht2ZPyj0WPY3nwXDZ2eM~tNNYM1L5BTzYoliapXr3YQsy2L-NfbF-0kdworK109ptJ9pVxSvOCss136RszzFPbSoAl79x2z3VzQYINCNg0wf0a-wgPtLjvkcjBj~5t8Zn7TYSoIp7uAQmRBPAA5LDIHEJxPZhEf8ZvDRlj7lAbVLtHQGmiBm95x94uvyzsNNehfJGVZ5yqpEjXY0A__"
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/1gQZpU9CnlZcWJ8HGLXzQB/sandbox/oVPYRU9RgQdubP3obmpBvs-img-3_1771810673000_na1fn_c3BlZWNoLWxhbmd1YWdlLXRoZXJhcHktaWxsdXN0cmF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvMWdRWnBVOUNubFpjV0o4SEdMWHpRQi9zYW5kYm94L29WUFlSVTlSZ1FkdWJQM29ibXBCdnMtaW1nLTNfMTc3MTgxMDY3MzAwMF9uYTFmbl9jM0JsWldOb0xXeGhibWQxWVdkbExYUm9aWEpoY0hrdGFXOXUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=iZquwjkz7olJxLHWZLVmp~By~ZDnBPKYcWdvPF0WLh16Vx2xDNZs8~a2ZkvgtoaZGr4aVHrWF~JTFFzu41Gd~JoLM7i6YJuUH5S~xjzjwtCtpHhnOa47J1dEcYoW45b9-CS1qht2ZPyj0WPY3nwXDZ2eM~tNNYM1L5BTzYoliapXr3YQsy2L-NfbF-0kdworK109ptJ9pVxSvOCss136RszzFPbSoAl79x2z3VzQYINCNg0wf0a-wgPtLjvkcjBj~5t8Zn7TYSoIp7uAQmRBPAA5LDIHEJxPZhEf8ZvDRlj7lAbVLtHQGmiBm95x94uvyzsNNehfJGVZ5yqpEjXY0A__"
                     alt="Speech & Language Therapy"
                     className="w-full h-auto rounded-3xl shadow-2xl"
                   />
                 </div>
 
-                <div>
+                <div className="order-1 lg:order-2">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-16 h-16 rounded-3xl bg-primary/10 flex items-center justify-center">
                     <Heart className="w-8 h-8 text-primary" />
